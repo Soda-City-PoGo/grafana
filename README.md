@@ -44,9 +44,11 @@ volumes:
     external: true
 ```
 
-`docker network create monitoring`
-`docker volume create grafana-volume`
-`docker volume create influxdb-volume`
+1. `docker network create monitoring`
+
+2. `docker volume create grafana-volume`
+
+3. `docker volume create influxdb-volume`
 
 now we need to prepare the Influxdb parameters, for this we’ll run the container with some environment variables for creating database and users:
 
@@ -78,9 +80,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 c00416d0d170        influxdb            "/entrypoint.sh infl…"   23 seconds ago      Up 21 seconds       0.0.0.0:8086->8086/tcp   
 ```
 
-OK, all containers was created and started, so our monitoring system ready to serve incoming requests. We expose few ports, as you can see in docker-compose file, the 8086 HTTP API port for Influxdb data and port 3000 for Grafana web UI.
+OK, all containers were created and started, so our monitoring system is ready to serve incoming requests. We expose few ports, as you can see in docker-compose file, the 8086 HTTP API port for Influxdb data and port 3000 for Grafana web UI.
 And we almost done with our new monitoring system, it’s really quick and easy using Docker. To fully complete we only need to configure Grafana a bit, create a dashboard and new data source for Influxdb.
-For this will go to our server1 public_ip:3000 (192.168.0.1:3000 in our example) in browser, and login to the Grafana web UI for very first time using:
+For this will go to localhost:3000 in a browser, and login to the Grafana web UI for very first time using:
+
 login: admin
 password:admin
 
