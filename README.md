@@ -92,6 +92,6 @@ For this will go to localhost:3000 in a browser, and login to the Grafana web UI
 
 `login: admin`
 
-`password:admin`
+`password: admin`
 
 Then Grafana will ask you to change password, Congrats! now you need to give it some mysql queries and make some widgets! :)
