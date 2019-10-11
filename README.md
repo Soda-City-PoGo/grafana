@@ -52,6 +52,8 @@ volumes:
 
 now we need to prepare the Influxdb parameters, for this we’ll run the container with some environment variables for creating database and users:
 
+change `supersecretpassword` to your prefered password
+
 
 ```
 server1$ docker run --rm \
@@ -63,8 +65,12 @@ server1$ docker run --rm \
   influxdb /init-influxdb.sh
 ```
 
-We run this container with –rm key, this will only create configs and remove the container after.
-Well all preparations are done, and we ready to start our new monitoring system, will do it by using docker-compose, go to the grafana Dir and run:
+We ran this container with –rm key, this will only create configs and remove the container after.
+
+
+With all preparations are done, and we ready to start our new monitoring system, 
+
+we will do it by using docker-compose, in the grafana directory run:
 
 `docker-compose up -d`
 
@@ -87,4 +93,4 @@ For this will go to localhost:3000 in a browser, and login to the Grafana web UI
 login: admin
 password:admin
 
-Then Grafana will ask you to change password, and after that you’ll get inside! Congrats!
+Then Grafana will ask you to change password, Congrats! now you need to give it some mysql queries and make some widgets! :)
