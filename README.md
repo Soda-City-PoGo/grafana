@@ -90,7 +90,8 @@ OK, all containers were created and started, so our monitoring system is ready t
 And we almost done with our new monitoring system, it’s really quick and easy using Docker. To fully complete we only need to configure Grafana a bit, create a dashboard and new data source for Influxdb.
 For this will go to localhost:3000 in a browser, and login to the Grafana web UI for very first time using:
 
-login: admin
-password:admin
+`login: admin`
+
+`password:admin`
 
 Then Grafana will ask you to change password, Congrats! now you need to give it some mysql queries and make some widgets! :)
